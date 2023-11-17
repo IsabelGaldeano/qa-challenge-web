@@ -1,0 +1,10 @@
+{
+  "name": "automation-c-and-a-website",
+  "version": "1.0.0",
+  "description": "Automate the C and A Website",
+  "main": "index.js",
+  "scripts": {
+  },
+  "author": "Isabel Garcia",
+  "license": "ISC"
+}
