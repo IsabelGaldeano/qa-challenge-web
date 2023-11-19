@@ -1,14 +1,10 @@
-import { Given, When, Then } from "@badeball/cypress-cucumber-preprocessor"
+import { When, Then } from "@badeball/cypress-cucumber-preprocessor"
 import registrationActions from './registrationActions'
 import registrationExpectations from './registrationExpectations'
 
 var email
 
 /*actions*/
-Given('User navigates to c and a website', () => {
-    registrationActions.userNavigatesToCAndAWebsite()
-})
-
 When('User clicks on Hacerse miembro button', () => {
     registrationActions.userClicksOnMemberButton()
 })
@@ -16,10 +12,6 @@ When('User clicks on Hacerse miembro button', () => {
 Then('User enters his email', () => {
     email = registrationActions.createAleatoryEmail()
     registrationActions.userEntersHisEmail(email)
-})
-
-Then('User clicks on button for continue', () => {
-    registrationActions.userClicksOnButtonForContinue()
 })
 
 Then('User selects Saludo', () => {
@@ -66,14 +58,6 @@ Then('User enters an empty last name', () => {
     registrationActions.userEntersAnEmptyLastName()
 })
 
-Then('User clicks on eye icon inactive', () => {
-    registrationActions.userClicksOnEyeIconInactive()
-})
-
-Then('User clicks on eye icon', () => {
-    registrationActions.userClicksOnEyeIcon()
-})
-
 Then('User clicks on privacy policy', () => {
     registrationActions.userClicksOnPrivacyPolicy()
 })
@@ -83,16 +67,8 @@ Then('User clicks on Data Protection', () => {
 })
 
 /*expectations*/
-Then('{string} page is shown', (pageName) => {
-    registrationExpectations.pageIsShown(pageName)
-})
-
 Then('User is registered correctly', () => {
     registrationExpectations.userIsRegisteredCorrectly()
-})
-
-Then('{string} text is shown', (text) => {
-    registrationExpectations.textIsShown(text)
 })
 
 Then('{string} text is not shown', (text) => {
@@ -130,4 +106,3 @@ Then('Privacy policy web is open', () => {
 Then('Data protection web is open', () => {
     registrationExpectations.dataProtectionWebIsShown()
 })
-

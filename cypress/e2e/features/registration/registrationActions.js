@@ -1,13 +1,3 @@
-const userAceptsCookies = () => {
-    cy.wait(1500)
-    cy.get('#onetrust-accept-btn-handler').click()
-}
-
-const userNavigatesToCAndAWebsite = () => {
-    cy.visit('https://www.c-and-a.com/es/es/shop')
-    userAceptsCookies()
-}
-
 const userClicksOnMemberButton = () => {
     cy.get('.sc-jQmKAM > [data-qa="Link"]').click()
 }
@@ -22,10 +12,6 @@ const userEntersHisEmail = (email) => {
     })
 
     cy.get('#emailAddress').clear().type(email)
-}
-
-const userClicksOnButtonForContinue = () => {
-    cy.get('[data-qa="LoadingButton"]').click()
 }
 
 const userSelectsSaludo = () => {
@@ -78,14 +64,6 @@ const userEntersAnEmptyLastName = () => {
     cy.get('[data-testid="lastName"]').type('{enter}')
 }
 
-const userClicksOnEyeIconInactive = () => {
-    cy.get('[data-qa="IconEyeInactive"]').click()
-}
-
-const userClicksOnEyeIcon = () => {
-    cy.get('[data-qa="IconEye"]').click()
-}
-
 const userClicksOnPrivacyPolicy = () => {
     cy.get('[href="https://www.c-and-a.com/es/es/shop/service/proteccion-de-datos#privacy"]', {timeout: 2000})
       .invoke('attr','target','_self')
@@ -99,11 +77,9 @@ const userClicksOnDataProtection = () => {
 }
 
 export default {
-    userNavigatesToCAndAWebsite,
     userClicksOnMemberButton,
     createAleatoryEmail,
     userEntersHisEmail,
-    userClicksOnButtonForContinue,
     userSelectsSaludo,
     userEntersHisName,
     userEntersHisLastName,
@@ -115,8 +91,6 @@ export default {
     userClicksOnModificarButton,
     userEntersAnEmptyName,
     userEntersAnEmptyLastName,
-    userClicksOnEyeIconInactive,
-    userClicksOnEyeIcon,
     userClicksOnPrivacyPolicy,
     userClicksOnDataProtection
 }

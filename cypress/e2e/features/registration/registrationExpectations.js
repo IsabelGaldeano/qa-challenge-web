@@ -1,13 +1,5 @@
-const pageIsShown = (pageName) => {
-    cy.contains(pageName).should('exist')
-}
-
 const userIsRegisteredCorrectly = () => {
     cy.get('.sc-AzbFF > [data-qa="Headline"]', {timeout: 3000}).should('exist')
-}
-
-const textIsShown = (text) => {
-    cy.contains(text).should('exist')
 }
 
 const textIsNotShown = (text) => {
@@ -47,9 +39,7 @@ const dataProtectionWebIsShown = () => {
 }
 
 export default {
-    pageIsShown,
     userIsRegisteredCorrectly,
-    textIsShown,
     textIsNotShown,
     passwordFieldIsShown,
     eyeIconInactiveIsShown,
