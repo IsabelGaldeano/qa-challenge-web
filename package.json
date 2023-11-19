@@ -3,8 +3,10 @@
   "version": "1.0.0",
   "description": "Automate the C and A Website",
   "main": "index.js",
-  "scripts": {
-  },
+  "scripts": {},
   "author": "Isabel Garcia",
-  "license": "ISC"
+  "license": "ISC",
+  "devDependencies": {
+    "cypress": "^13.5.1"
+  }
 }
