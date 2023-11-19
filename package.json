@@ -4,7 +4,8 @@
   "description": "Automate the C and A Website",
   "main": "index.js",
   "scripts": {
-    "cypress:open": "cypress open --e2e --browser=chrome"
+    "cypress:open": "cypress open --e2e --browser=chrome",
+    "cypress:run": "cypress run --browser=chrome"
   },
   "author": "Isabel Garcia",
   "license": "ISC",
@@ -19,7 +20,8 @@
     "stepDefinitions": [
       "cypress/e2e/features/*.js",
       "cypress/e2e/features/**/*.js",
-      "cypress/e2e/features/**/**/*.js"
+      "cypress/e2e/features/**/**/*.js",
+      "cypress/support/step_definitions/**/*.js"
     ]
   }
 }
