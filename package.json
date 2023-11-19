@@ -3,10 +3,21 @@
   "version": "1.0.0",
   "description": "Automate the C and A Website",
   "main": "index.js",
-  "scripts": {},
+  "scripts": {
+    "cypress:open": "cypress open --e2e --browser=chrome"
+  },
   "author": "Isabel Garcia",
   "license": "ISC",
   "devDependencies": {
+    "@badeball/cypress-cucumber-preprocessor": "^19.1.1",
+    "@bahmutov/cypress-esbuild-preprocessor": "^2.2.0",
+    "@esbuild-plugins/node-modules-polyfill": "^0.2.2",
     "cypress": "^13.5.1"
+  },
+  "cypress-cucumber-preprocessor": {
+    "nonGlobalStepDefinitions": false,
+    "stepDefinitions": [
+      "cypress/e2e/features/*.js"
+    ]
   }
 }
