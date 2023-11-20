@@ -17,7 +17,7 @@ Then "Ya casi está" page is shown
     And User clicks on button for continue
 Then User is registered correctly
 
-Scenario: User enters and email already used
+Scenario: User enters an email already used
 Then User enters an email already used
     And User clicks on button for continue
 Then '¡Ey, ya tienes una cuenta de miembro; inicia sesión aquí!' text is shown
